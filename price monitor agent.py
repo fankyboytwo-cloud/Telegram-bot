@@ -48,7 +48,7 @@ STORES = {
 
 # Email конфигурация
 EMAIL_CONFIG = {
-    'sender': 'price-monitor-bot@gmail.com',
+    'sender': 'fankyboytwo@gmail.com',
     'app_password': os.getenv('EMAIL_APP_PASSWORD', ''),
     'recipient': 'ivanaryzhkov@icloud.com',
     'smtp_server': 'smtp.gmail.com',
