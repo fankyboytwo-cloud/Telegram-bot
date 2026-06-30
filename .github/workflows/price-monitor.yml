@@ -31,4 +31,7 @@ jobs:
       - name: Run price monitor
         env:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        run: python price_monitor_agent.py
+        run: |
+          cd $GITHUB_WORKSPACE
+          python 
+        price_monitor_agent.py
