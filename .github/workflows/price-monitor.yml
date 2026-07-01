@@ -2,36 +2,21 @@ name: Price Monitor
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # 7:00 по московскому времени
-  workflow_dispatch: 
-  
+    - cron: '0 4 * * *'
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
-
-      - name: Check files in repository
-        run: |
-          echo "📂 Текущая папка:"
-          pwd
-          echo ""
-          echo "📋 Все файлы в репозитории:"
-          ls -lah
-          echo ""
-          echo "🔍 Ищем price_monitor_agent.py:"
-          find . -name "price_monitor_agent.py" -type f || echo "❌ Файл не найден!"
       
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
-          python-version: 3.9
-      - name: Install dependencies
-        run: pip install pandas openpyxl requests
-      - name: Run price monitor
+          python-version: '3.9'
+      
+      - run: pip install -r requirements.txt
+      
+      - run: python price_monitor_agent.py
         env:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-        run: |
-          cd $GITHUB_WORKSPACE
-          python 
-        price_monitor_agent.py
