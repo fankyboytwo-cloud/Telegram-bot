@@ -48,12 +48,13 @@ STORES = {
 
 # Email конфигурация
 EMAIL_CONFIG = {
-    'sender': 'fankyboytwo@gmail.com',
+    'sender': 'Fankyboytwo@yandex.ru',  # ← Твой Яндекс email
     'app_password': os.getenv('EMAIL_APP_PASSWORD', ''),
     'recipient': 'ivanaryzhkov@icloud.com',
-    'smtp_server': 'smtp.gmail.com',
+    'smtp_server': 'smtp.yandex.ru',  # ← ВМЕСТО smtp.gmail.com
     'smtp_port': 587
 }
+
 
 # ============================================================================
 # КЛАССЫ
