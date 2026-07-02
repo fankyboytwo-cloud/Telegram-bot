@@ -63,7 +63,7 @@ STORES = {
 }
 
 EMAIL_CONFIG = {
-    'sender': 'твой_email@yandex.ru',  # ← ИЗМЕНИ НА СВОЙ ЯНДЕКС EMAIL
+    'sender': 'Fankyboytwo@yandex.ru',  # ← ИЗМЕНИ НА СВОЙ ЯНДЕКС EMAIL
     'app_password': os.getenv('EMAIL_APP_PASSWORD', ''),
     'recipient': 'ivanaryzhkov@icloud.com',
     'smtp_server': 'smtp.yandex.ru',
